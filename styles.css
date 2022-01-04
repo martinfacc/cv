@@ -17,6 +17,8 @@ body {
     --color-text: black;
     --color-border: black;
     --color-orange: #ff9c35;
+    --color-blue: #3699ff;
+    --deg-theme: 0deg;
 }
 
 body.dark-theme {
@@ -24,10 +26,11 @@ body.dark-theme {
     --color-left: hsl(205, 94%, 12%);
     --color-right: #1e1e2d;
     --color-text: white;
-    --color-title: #3699ff;
+    --color-title: var(--color-blue);
     --color-text: white;
     --color-border: black;
     --toggle-theme-left: 1.83rem;
+    --deg-theme: 180deg;
 }
 
 body.dark-theme img {
@@ -51,13 +54,6 @@ img {
     border-radius: 50%;
 }
 
-svg {
-    float: right;
-    display: block;
-    width: 1.66rem;
-    margin-left: .5rem;
-}
-
 article {
     text-align: center;
     padding: 0 3.33rem;
@@ -67,27 +63,6 @@ h1 {
     font-family: 'Comfortaa', cursive;
     letter-spacing: -.07rem;
     color: var(--color-title);
-}
-
-body > section > button {
-    cursor: pointer;
-    position: relative;
-    float: right;
-    height: 1.66rem;
-    width: 3.38rem;
-    border: none;
-    border-radius: 1.66rem;
-    background-color: var(--color-text);
-}
-
-body > section > button > section {
-    position: absolute;
-    top: .09rem;
-    left: var(--toggle-theme-left);
-    height: 1.48rem;
-    width: 1.48rem;
-    border-radius: 50%;
-    background-color: var(--color-body);
 }
 
 article > header > h1 {
@@ -111,16 +86,19 @@ article > section > ul {
     font-size: .87rem;
 }
 
-article > section > ul > a > img {
+article > section > ul > a > svg {
     margin: .27rem;
     width: 2rem;
-    filter: invert(1);
     transition-duration: .1s;
 }
 
-article > section > ul > a :hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+article > section > ul > a:hover > svg {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+article > section > ul > a > svg > g {
+    fill: var(--color-text);
 }
 
 .theme {
@@ -128,6 +106,25 @@ article > section > ul > a :hover {
     width: 100%;
     height: 1.76rem;
     margin-bottom: 1rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.theme > button {
+    border: none;
+    background-color: transparent;
+}
+
+.theme > button > svg {
+    cursor: pointer;
+    width: 1.66rem;
+    transition: .1s;
+    transform: rotate(var(--deg-theme));
+}
+
+.theme > button > svg > g {
+    fill: var(--color-text);
 }
 
 .left {
@@ -198,22 +195,22 @@ article > section > ul > a :hover {
 }
 
 .contact-info > a:hover {
-    color: var(--color-orange);
+    color: var(--color-blue);
 }
 
-.contact-info > a > img {
+.contact-info > a > svg {
     height: 1.5rem;
     vertical-align: middle;
-    background-color: white;
-    border: white solid .07rem;
     transition: .1s;
 }
 
-.contact-info > a:hover > img {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+.contact-info > a > svg > g {
+    fill: var(--color-text);
 }
 
+.contact-info > a:hover > svg > g {
+    fill: var(--color-blue)
+}
 
 
 .right > .in {
@@ -228,15 +225,19 @@ article > section > ul > a :hover {
 }
 
 @media print {
-    img {
-        background-color: black;
+
+    body {
+        --color-body: #edf0f2;
+        --color-left: white;
+        --color-right: #efe8e9;
+        --color-title: black;
+        --color-text: black;
+        --color-border: black;
     }
 
     .theme, .contact-info {
         display: none;
     }
-
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -246,8 +247,7 @@ article > section > ul > a :hover {
         --color-right: #263238;
         --color-title: #3699ff;
         --color-text: white;
-        --color-border: black;
-        --toggle-theme-left: 1.83rem;
+        --deg-theme: 180deg;
     }
     body.light-theme {
         --color-body: #edf0f2;
@@ -255,8 +255,7 @@ article > section > ul > a :hover {
         --color-right: #efe8e9;
         --color-title: black;
         --color-text: black;
-        --color-border: black;
-        --toggle-theme-left: .09rem;
+        --deg-theme: 0deg;
     }
     img {
         filter: brightness(0.8) contrast(1.2);

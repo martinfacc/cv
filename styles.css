@@ -238,9 +238,11 @@ article > section > ul > a > svg > g {
     .theme, .contact-info {
         display: none;
     }
+    
 }
 
 @media (prefers-color-scheme: dark) {
+
     body {
         --color-body: #2c2f33;
         --color-left: #37474F;
@@ -249,6 +251,7 @@ article > section > ul > a > svg > g {
         --color-text: white;
         --deg-theme: 180deg;
     }
+
     body.light-theme {
         --color-body: #edf0f2;
         --color-left: white;
@@ -257,6 +260,7 @@ article > section > ul > a > svg > g {
         --color-text: black;
         --deg-theme: 0deg;
     }
+
     img {
         filter: brightness(0.8) contrast(1.2);
     }
@@ -264,4 +268,5 @@ article > section > ul > a > svg > g {
     body.light-theme img {
         filter: brightness(1) contrast(1);
     }
+
 }

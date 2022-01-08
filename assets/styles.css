@@ -281,7 +281,7 @@ div>article>section>ul>a>svg>g {
         --color-border: black;
     }
 
-    .theme, .contact {
+    .theme, .contact, footer {
         display: none;
     }
 

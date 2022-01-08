@@ -1,4 +1,4 @@
-const button = document.querySelector('#changeTheme')
+const button = document.querySelector('.theme > button')
 const configUser = window.matchMedia('(prefers-color-scheme: dark)')
 button.addEventListener('click', () => {
     if (configUser.matches) {

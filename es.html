@@ -8,36 +8,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
     <section class="theme">
-        <button id="changeTheme">
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="adjust" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z" class=""></path></g>
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <g><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z" class=""></path></g>
             </svg>
         </button>
     </section>
     <section class="left">
-        <article class="avatar">
+        <article class="info">
             <img src="./assets/avatar.jpg">
-        </article>
-        <article class="about-me">
             <h1>Martín Facciuto</h1>
-            <h2>FULL STACK WEB DEVELOPER</h2>
+            <h2>DESARROLLADOR WEB</h2>
             <p>
-                An experienced website developer specializing in websites and phone applications. Have done numerous projects
-                involving front and back
-                end development.
+                Un desarrollador web full-stack semi-senior, con experiencia en varios frameworks, lenguajes y herramientas. Capaz de lidiar con proyectos de alta carga y utilizar metodologias agiles. Disponible para empleo a tiempo parcial o completo.
             </p>
-        </article>
-        <article class="personal-info">
             <ul>
                 <li>+54 221 455-6107</li>
                 <li>me@martinfacciuto.site</li>
                 <li>La Plata, Buenos Aires, Argentina</li>
             </ul>
         </article>
-        <article class="contact-info">
+        <article class="contact">
             <a href="https://www.linkedin.com/in/mart%C3%ADn-facciuto-729328219/" target="_blank">
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4096.000000 4096.000000" preserveAspectRatio="xMidYMid meet">
                     <g transform="translate(0.000000,4096.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
@@ -111,50 +106,38 @@
         </article>
     </section>
     <section class="right">
-        <div class="in">
+        <div>
             <article>
-                <header>
-                    <h1>Experience</h1>
-                    <div class="horizontal-line"></div>
-                </header>
+                <h1>Experiencia</h1>
                 <section>
-                    <h2>Full Stack Web Developer</h2>
-                    <h3>Autoridad del Agua | 2021 - present</h3>
+                    <h2>Tech Lead</h2>
+                    <h3>Autoridad del Agua | 2021 - actualidad</h3>
                     <ul>
-                        <li>Created web-based promotional collaterals for different campaigns</li>
-                        <li>Optimized home and landing pages</li>
-                        <li>Designed and developed email campaigns</li>
+                        <li>Liderazgo de un equipo back-end durante el desarrollo de un sistema Business Project Manager.</li>
+                        <li>Desarrollo front-end de un sistema Business Project Manager.</li>
                     </ul>
                 </section>
                 <section>
                     <h2>Full Stack Web Developer</h2>
-                    <h3>Ministerio de Desarrollo Territorial y Hábitat | 2020 - present</h3>
+                    <h3>Ministerio de Desarrollo Territorial y Hábitat | 2020 - actualidad</h3>
                     <ul>
-                        <li>Met with clients to discuss project requirements and workflow</li>
-                        <li>Designed and coded websites, from layout to function, according to client specifications</li>
+                        <li>Desarrollo de un sistema de recursos humanos para la administración de personal e infraestructura.</li>
+                        <li>Normalización de los datos obtenidos en las DDJJ de los empleados para su explotación en los sistemas.</li>
                     </ul>
                 </section>
             </article>
-
             <article>
-                <header>
-                    <h1>Education</h1>
-                    <div class="horizontal-line"></div>
-                </header>
+                <h1>Educacion</h1>
                 <section>
                     <h2>Licenciatura en Ciencias Fisicas</h2>
                     <h3>Universidad Nacional de La Plata | 2017 - 2021</h3>
                 </section>
             </article>
             <article>
-                <header>
-                    <h1>Tecnologies</h1>
-                    <div class="horizontal-line"></div>
-                </header>
+                <h1>Tecnologias</h1>
                 <section>
                     <ul class="p-0">
                         <a href="https://www.w3schools.com/css/" target="_blank">
-                            <!-- <img src="./assets/svgs/css.svg" alt="css"> -->
                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3200.000000 3200.000000" preserveAspectRatio="xMidYMid meet">
                                 <g transform="translate(0.000000,3200.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                                     <path d="M15385 31994 c-33 -2 -154 -8 -270 -14 -3695 -192 -7228 -1687 -9980
@@ -1117,6 +1100,14 @@
             </article>
         </div>
     </section>
-    <script src="./scripts.js"></script>
+    <footer>
+        <a class="flag flag-active">
+            <img src="https://flagicons.lipis.dev/flags/4x3/ar.svg">
+        </a>
+        <a href="./en.html" class="flag">
+            <img src="https://flagicons.lipis.dev/flags/4x3/um.svg">
+        </a>
+    </footer>
+    <script src="./assets/scripts.js"></script>
 </body>
 </html>

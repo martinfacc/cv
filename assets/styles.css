@@ -1,4 +1,3 @@
-
 html {
     font-size: 15px;
 }
@@ -33,7 +32,7 @@ body.dark-theme {
     --deg-theme: 180deg;
 }
 
-body.dark-theme img {
+body.dark-theme .info>img {
     filter: brightness(0.8) contrast(1.2);
 }
 
@@ -50,10 +49,6 @@ a {
     text-decoration: none;
 }
 
-img {
-    border-radius: 50%;
-}
-
 article {
     text-align: center;
     padding: 0 3.33rem;
@@ -65,7 +60,13 @@ h1 {
     color: var(--color-title);
 }
 
-article > header > h1 {
+footer {
+    height: 3rem;
+    width: 100%;
+    display: inline-block;
+}
+
+div>article>h1 {
     padding-bottom: .67rem;
     width: 10rem;
     font-size: 1.33rem;
@@ -73,32 +74,36 @@ article > header > h1 {
     border-bottom: var(--color-text) solid 2px;
 }
 
-article > section > h2 {
+div>article>section>h2 {
     font-size: .93rem;
 }
 
-article > section > h3 {
+div>article>section>h3 {
     font-size: .87rem;
     font-weight: normal;
 }
 
-article > section > ul {
+div>article>section>ul {
     font-size: .87rem;
 }
 
-article > section > ul > a > svg {
+div>article>section>ul>a>svg {
     margin: .27rem;
     width: 2rem;
     transition-duration: .1s;
 }
 
-article > section > ul > a:hover > svg {
+div>article>section>ul>a:hover>svg {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
-article > section > ul > a > svg > g {
+div>article>section>ul>a>svg>g {
     fill: var(--color-text);
+}
+
+.p-0 {
+    padding: 0rem;
 }
 
 .theme {
@@ -111,19 +116,19 @@ article > section > ul > a > svg > g {
     align-content: center;
 }
 
-.theme > button {
+.theme>button {
     border: none;
     background-color: transparent;
 }
 
-.theme > button > svg {
+.theme>button>svg {
     cursor: pointer;
     width: 1.66rem;
     transition: .1s;
     transform: rotate(var(--deg-theme));
 }
 
-.theme > button > svg > g {
+.theme>button>svg>g {
     fill: var(--color-text);
 }
 
@@ -134,7 +139,7 @@ article > section > ul > a > svg > g {
     background-color: var(--color-left);
 }
 
-.left > article {
+.left>article {
     padding: 0 2.67rem;
 }
 
@@ -145,100 +150,94 @@ article > section > ul > a > svg > g {
     background-color: var(--color-right);
 }
 
-.avatar img {
+.info img {
+    border-radius: 50%;
     margin-top: 1rem;
     width: 16.67rem;
 }
 
-.about-me > h1 {
+.info>h1 {
     font-size: 2.42rem;
     margin: 1rem 0 0 0;
 }
 
-.about-me > h2 {
+.info>h2 {
     font-size: 1.13rem;
     font-weight: normal;
     margin: 0;
 }
 
-.about-me > p {
-    margin: 2rem 0 0 0;
+.info>p {
+    margin: 1rem 0 0 0;
     font-size: 1rem;
 }
 
-.personal-info {
-    position: relative;
-    margin: 2rem 0 0 0;
-    text-align: left;
-}
-
-.personal-info > ul {
+.info>ul {
     font-size: .87rem;
     list-style: none;
     padding: .66rem;
     border-left: var(--color-text) solid .16rem;
 }
 
-.personal-info > ul > li {
+.info>ul>li {
     margin: .1rem 0 0 0;
 }
 
-.contact-info {
+.contact {
     margin: 1.5rem 0 0 0;
     display: flex;
     gap: 1rem;
     margin-inline-start: 2rem;
 }
 
-.contact-info > a {
+.contact>a {
     color: var(--color-text);
 }
 
-.contact-info > a:hover {
+.contact>a:hover {
     color: var(--color-blue);
 }
 
-.contact-info > a > svg {
+.contact>a>svg {
     height: 1.5rem;
     vertical-align: middle;
     transition: .1s;
 }
 
-.contact-info > a > svg > g {
+.contact>a>svg>g {
     fill: var(--color-text);
 }
 
-.contact-info > a:hover > svg > g {
+.contact>a:hover>svg>g {
     fill: var(--color-blue)
 }
 
 
-.right > .in {
+.right>div {
     margin: 2rem 2rem 2rem 0;
     border-top: .13rem solid var(--color-text);
     border-right: .13rem solid var(--color-text);
     border-bottom: .13rem solid var(--color-text);
 }
 
-.p-0 {
-    padding: 0rem;
+.flag {
+    float: right;
+    padding: .3rem .1rem;
 }
 
-@media print {
+.flag>img {
+    height: 1.66rem;
+    width: 1.66rem;
+    object-fit: cover;
+    filter: grayscale(1)
+}
 
-    body {
-        --color-body: #edf0f2;
-        --color-left: white;
-        --color-right: #efe8e9;
-        --color-title: black;
-        --color-text: black;
-        --color-border: black;
-    }
+.flag:hover>img {
+    filter: grayscale(0)
+}
 
-    .theme, .contact-info {
-        display: none;
-    }
-    
+.flag-active>img {
+    filter: grayscale(0)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -261,12 +260,29 @@ article > section > ul > a > svg > g {
         --deg-theme: 0deg;
     }
 
-    img {
+    .info>img {
         filter: brightness(0.8) contrast(1.2);
     }
 
-    body.light-theme img {
+    body.light-theme .info>img {
         filter: brightness(1) contrast(1);
+    }
+
+}
+
+@media print {
+
+    body {
+        --color-body: #edf0f2;
+        --color-left: white;
+        --color-right: #efe8e9;
+        --color-title: black;
+        --color-text: black;
+        --color-border: black;
+    }
+
+    .theme, .contact {
+        display: none;
     }
 
 }

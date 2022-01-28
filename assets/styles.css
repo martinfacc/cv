@@ -4,7 +4,7 @@ html {
 
 * {
     font-family: 'Roboto', sans-serif;
-    letter-spacing: .07px;
+    letter-spacing: .005rem;
     text-align: left;
 }
 
@@ -71,7 +71,7 @@ div>article>h1 {
     width: 10rem;
     font-size: 1.33rem;
     font-weight: bold;
-    border-bottom: var(--color-text) solid 2px;
+    border-bottom: var(--color-text) solid .15rem;
 }
 
 div>article>section>h2 {
@@ -215,9 +215,9 @@ div>article>section>ul>a>svg>g {
 
 .right>div {
     margin: 2rem 2rem 2rem 0;
-    border-top: .13rem solid var(--color-text);
-    border-right: .13rem solid var(--color-text);
-    border-bottom: .13rem solid var(--color-text);
+    border-top: .15rem solid var(--color-text);
+    border-right: .15rem solid var(--color-text);
+    border-bottom: .15rem solid var(--color-text);
 }
 
 .flag {

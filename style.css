@@ -293,16 +293,15 @@ header > .switch > input:checked + .slider:before {
 @media (prefers-color-scheme: dark) {
 	body {
 		--color-body: #2c2f33;
-		--color-left: #37474f;
+
+		--background-color-left: #263238;
+		--background-color-right: var(--color-green);
+		--color-left: white;
 		--color-right: #263238;
-		--color-text: white;
 	}
 
 	body.light-theme {
 		--color-body: #edf0f2;
-		--color-left: white;
-		--color-right: #efe8e9;
-		--color-text: black;
 
 		--background-color-left: white;
 		--background-color-right: var(--color-green);

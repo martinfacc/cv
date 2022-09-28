@@ -1,15 +1,15 @@
 :root {
 	--color-green: #7a9e7e;
 	--color-dark-green: #31493c;
-	--color-body: #edf0f2;
-	--color-left: white;
-	--color-right: #efe8e9;
-	--color-text: black;
+	--color-blue: #263238;
+	--color-dark-blue: #1c2429;
+	--color-light: #edf0f2;
 
-	--background-color-left: white;
+	--color-body: var(--color-light);
+	--background-color-left: #fff;
 	--background-color-right: var(--color-green);
 	--color-left: var(--color-dark-green);
-	--color-right: white;
+	--color-right: #fff;
 }
 
 * {
@@ -35,10 +35,11 @@ body {
 }
 
 body.dark-theme {
-	--color-body: #151521;
-	--color-left: hsl(205, 94%, 12%);
-	--color-right: #1e1e2d;
-	--color-text: white;
+	--color-body: var(--color-dark-blue);
+	--background-color-left: var(--color-blue);
+	--background-color-right: var(--color-green);
+	--color-left: #fff;
+	--color-right: var(--color-blue);
 }
 
 body,
@@ -291,22 +292,35 @@ header > .switch > input:checked + .slider:before {
 	transform: translateX(24px);
 }
 
+footer {
+	display: none;
+}
+
+footer > a {
+	color: var(--color-green);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+footer > a:hover {
+	color: var(--color-dark-green);
+}
+
 @media (prefers-color-scheme: dark) {
 	body {
-		--color-body: #1c2429;
-		--background-color-left: #263238;
+		--color-body: var(--color-dark-blue);
+		--background-color-left: var(--color-blue);
 		--background-color-right: var(--color-green);
-		--color-left: white;
-		--color-right: #263238;
+		--color-left: #fff;
+		--color-right: var(--color-blue);
 	}
 
 	body.light-theme {
-		--color-body: #edf0f2;
-
-		--background-color-left: white;
+		--color-body: var(--color-light);
+		--background-color-left: #fff;
 		--background-color-right: var(--color-green);
 		--color-left: var(--color-dark-green);
-		--color-right: white;
+		--color-right: #fff;
 	}
 
 	#left > img {
@@ -320,16 +334,20 @@ header > .switch > input:checked + .slider:before {
 
 @media print {
 	body {
-		--color-body: #edf0f2;
-		--color-left: white;
-		--color-right: #efe8e9;
-		--color-text: black;
+		--color-body: var(--color-light);
+		--background-color-left: white;
+		--background-color-right: var(--color-green);
+		--color-left: var(--color-dark-green);
+		--color-right: white;
 	}
 
 	body > header,
-	.contact,
-	footer {
+	.contact {
 		display: none;
+	}
+
+	footer {
+		display: block;
 	}
 }
 

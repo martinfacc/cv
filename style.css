@@ -326,7 +326,7 @@ header > .switch > input:checked + .slider:before {
 		--color-text: black;
 	}
 
-	.theme,
+	body > header,
 	.contact,
 	footer {
 		display: none;

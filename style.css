@@ -68,6 +68,10 @@ body,
 	transition: color 0.3s;
 }
 
+a {
+	text-decoration: none;
+}
+
 svg {
 	fill: var(--color-right);
 	transition: fill 0.3s, scale 0.3s;
@@ -186,7 +190,6 @@ h2 {
 }
 
 #social-link > a {
-	text-decoration: none;
 	display: flex;
 	align-items: center;
 	gap: 5px;
@@ -210,10 +213,6 @@ h2 {
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
 	gap: 5px;
-}
-
-#stack-list > a {
-	text-decoration: none;
 }
 
 #stack-list > a > svg {
